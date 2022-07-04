@@ -11,51 +11,26 @@
 
 int _printf(const char *format, ...)
 {
-	va_list lst;
-	int i = 0, j = 0;
-	char buff[100] = {0};
-	char *str_arg;
+	va_list args;
+	int i = 0, count = 0;
 
-	va_start(lst, format);
+	va_start(args, format);
 
 	while (format && format[i])
 	{
 		if (format[i] == '%')
 		{
 			i++;
-			switch (format[i])
-			{
-				case 'c':
-					buff[j] = (char)va_arg(lst, int);
-					j++;
-					break;
-				case 's':
-					str_arg = va_arg(lst, char *);
-					_strncpy(&buff[j], str_arg);
-					j += _strlen(str_arg);
-					break;
-				case '%':
-					buff[j] = '%';
-					j++;
-					break;
-				default:
-					buff[j] = '%';
-					j++;
-					buff[j] = format[i];
-					continue;
-			}
+			count += get_op_func(format, args);
 		}
 		else
 		{
-			buff[j] = format[i];
-			j++;
+			_putchar(format[i]);
+			count++;
 		}
 		i++;
 	}
-	for (i = 0; i <= j; i++)
-	{
-		_putchar(buff[i]);
-	}
-	va_end(lst);
-	return (j);
+
+	va_end(args);
+	return (count);
 }
