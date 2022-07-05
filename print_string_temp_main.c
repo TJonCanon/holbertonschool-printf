@@ -1,8 +1,8 @@
 #include "main.h"
 int main(void)
 {
-	char c = "x";
+	char x[5] = "test\n";
 
-	print_char(c);
+	print_string(x);
 	return (0);
 }
