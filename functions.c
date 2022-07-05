@@ -52,7 +52,7 @@ int op_decimal(va_list args)
 	{
 		_putchar('-');
 		n = -n;
-		n = m;
+		m = n;
 		count++;
 	}
 	while (n / 10)
@@ -69,8 +69,10 @@ int op_decimal(va_list args)
 
 void decimal_helper(int n)
 {
-	if (n / 10)
-		decimal_helper(n / 10);
+	unsigned int t = n;
 
-	_putchar(n % 10 + '0');
+	if (t / 10)
+		decimal_helper(t / 10);
+
+	_putchar(t % 10 + '0');
 }
