@@ -34,3 +34,31 @@ int op_string(va_list args)
 	}
 	return (i);
 }
+
+/**
+* op_decimal - prints integer to stdout
+* @args: arguments
+*
+* Return: 4 (# of bytes)
+*/
+
+int op_decimal(va_list args)
+{
+	int n = va_arg(args, int);
+	int m = n;
+
+	if (n < 0)
+	{
+		_putchar('-');
+		n = -n;
+	}
+	while (n / 10)
+	{
+		n = n / 10;
+		_putchar(n % 10 + '0');
+	}
+
+	_putchar(m % 10 + '0');
+
+	return(4);
+}
