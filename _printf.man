@@ -1,0 +1,43 @@
+.Dd 7/5/22               \" DATE
+.Dt _printf()     \" Program name and manual section number
+.Os Hall/Joyner
+.Sh NAME                 \" Section Header - required - don't modify
+.Nm _printf()
+.\" The following lines are read in generating the apropos(man -k) database. Use only key
+.\" words here as the database is built based on the words here and in the .ND line.
+.Nd print data
+.Sh SYNOPSIS             \" Section Header - required - don't modify
+int _printf(const char,
+.Ar *format
+, ...)
+.Pp
+.Sh DESCRIPTION
+.Nm
+produces an output based on the
+.Ar format. 
+The format specifiers determine the output of the the function. The format specfiers are as follows:
+.Pp                      \" Inserts a space
+.Bl -tag -width -indent  \" Begins a tagged list
+.It %c               \" Each item preceded by .It macro
+Prints character data type
+.It %s
+Prints string data type
+.It %%
+Prints the percent character
+.It %d
+Prints decimal data type
+.It %i
+Prints integer data type
+.Sh EXAMPLES
+.Bl -tag -width -indent
+.It Print a character: _printf("%c")
+.It Print a string: _printf("%s")
+.It Print a percent: _printf("%%")
+.It Print a decimal: _printf("%d")
+.It Print an integer: _printf("%i")
+.Sh RETURN VALUE
+On return success,
+.Nm
+returns total characters printed
+.Pp
+On error,
