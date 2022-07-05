@@ -22,14 +22,22 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			get_op_func_ptr = get_op_func(&format[i]);
-			if (get_op_func_ptr != NULL)
-				count += get_op_func_ptr(args);
+			if (format[i] == '%')
+			{
+				_putchar('%');
+				count++;
+			}
 			else
 			{
-				_putchar(format[i - 1]);
-				_putchar(format[i]);
-				count = count + 2;
+				get_op_func_ptr = get_op_func(&format[i]);
+				if (get_op_func_ptr != NULL)
+					count += get_op_func_ptr(args);
+				else
+				{
+					_putchar(format[i - 1]);
+					_putchar(format[i]);
+					count = count + 2;
+				}
 			}
 		}
 		else
@@ -37,9 +45,8 @@ int _printf(const char *format, ...)
 			_putchar(format[i]);
 			count++;
 		}
-		i++;
+			i++;
 	}
-
 	va_end(args);
 	return (count);
 }
