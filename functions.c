@@ -67,6 +67,11 @@ int op_decimal(va_list args)
 	return(count);
 }
 
+/**
+* decimal_helper - aids in op_decimal recursion
+* @n: integer
+*/
+
 void decimal_helper(int n)
 {
 	unsigned int t = n;
