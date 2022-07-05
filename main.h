@@ -10,6 +10,7 @@ int _putchar(char c);
 int op_char(va_list args);
 int op_string(va_list args);
 int op_decimal(va_list args);
+void decimal_helper(int n);
 int (*get_op_func(const char *format))(va_list);
 
 /**

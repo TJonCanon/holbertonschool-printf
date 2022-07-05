@@ -45,20 +45,24 @@ int op_string(va_list args)
 int op_decimal(va_list args)
 {
 	int n = va_arg(args, int);
-	int m = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
 		n = -n;
 	}
-	while (n / 10)
-	{
-		n = n / 10;
-		_putchar(n % 10 + '0');
-	}
+	if (n / 10)
+		decimal_helper(n / 10);
 
-	_putchar(m % 10 + '0');
+	_putchar(n % 10 + '0');
 
 	return(4);
+}
+
+void decimal_helper(int n)
+{
+	if (n / 10)
+		decimal_helper(n / 10);
+
+	_putchar(n % 10 + '0');
 }
