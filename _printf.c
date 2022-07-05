@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 {
 	va_list args;
 	int i = 0, count = 0;
+	int (*get_op_func_ptr)(va_list);
 
 	va_start(args, format);
 
@@ -21,7 +22,15 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			count += get_op_func(format, args);
+			get_op_func_ptr = get_op_func(&format[i]);
+			if (get_op_func_ptr != NULL)
+				count += get_op_func_ptr(args);
+			else
+			{
+				_putchar(format[i - 1]);
+				_putchar(format[i]);
+				count = count + 2;
+			}
 		}
 		else
 		{
