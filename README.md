@@ -13,3 +13,7 @@ Format specifiers tell _printf which data type the user would like to print to t
 __Format Specifier:__ %c
 >Example: _printf("%c", 'r')
 >Output: r
+### Printing Strings:
+__Format Specifier:__ %s
+>Example: _printf("%s", "Holberton Rocks")
+>Output: Holberton Rocks
