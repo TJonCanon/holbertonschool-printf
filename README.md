@@ -17,7 +17,4 @@ __Format Specifier:__ %c
 __Format Specifier:__ %s
 >Example: _printf("%s", "Holberton Rocks")\
 >Output: Holberton Rocks
-### Print Decimals:
-__Format Specifier:__ %d
->Example: _printf("%d", 23)\
->Output: 23
+
