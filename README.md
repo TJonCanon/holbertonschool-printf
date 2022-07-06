@@ -17,4 +17,7 @@ __Format Specifier:__ %c
 __Format Specifier:__ %s
 >Example: _printf("%s", "Holberton Rocks")\
 >Output: Holberton Rocks
-
+### Print Integers:
+__Format Specifier:__ %d or %i
+>Example: _printf("Michael Jordan wore numbers %d and %i in his career"), 23, 45)\
+>Output: Michael Jordan wore 23 and 45 in his career
