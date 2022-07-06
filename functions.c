@@ -64,7 +64,7 @@ int op_decimal(va_list args)
 	decimal_helper(m);
 
 
-	return(count);
+	return (count);
 }
 
 /**
