@@ -23,5 +23,5 @@ __Format Specifier:__ %d or %i
 
 
 ## Project Authors:
-**Nathan Hall** | [Github](https://github.com/NathanHall762)
+**Nathan Hall** | [Github](https://github.com/NathanHall762)\
 **Taylor Joyner** | [Github](https://github.com/TJonCanon)
