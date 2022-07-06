@@ -39,5 +39,3 @@ Prints integer data type
 On return success,
 .Nm
 returns total characters printed
-.Pp
-On error,
