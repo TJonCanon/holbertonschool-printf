@@ -20,3 +20,8 @@ __Format Specifier:__ %s
 __Format Specifier:__ %d or %i
 >Example: _printf("Michael Jordan wore numbers %d and %i in his career"), 23, 45)\
 >Output: Michael Jordan wore 23 and 45 in his career
+
+
+## Project Authors:
+**Nathan Hall** | [Github](https://github.com/NathanHall762)
+**Taylor Joyner** | [Github](https://github.com/TJonCanon)
