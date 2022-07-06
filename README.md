@@ -9,3 +9,7 @@ This a interpretation and application of the original printf function in the sta
  - Print an Integer
 ### Format Specifiers:
 Format specifiers tell _printf which data type the user would like to print to the standard output. A format specifier is marked with a percent symbol (%). To use the format specifier you much use a designating variable after the percent symbol to specify which type of data you could like to output.
+### Printing Characters:
+__Format Specifier:__ %c
+>Example: _printf("%c", 'r')
+>Output: r
